@@ -1,6 +1,8 @@
 ﻿namespace OrderUsings.ReSharper.Highlightings
 {
+    using JetBrains.DocumentModel;
     using JetBrains.ReSharper.Daemon;
+    using JetBrains.ReSharper.Feature.Services.Daemon;
     using JetBrains.ReSharper.Psi.CSharp.Tree;
 
     using OrderUsings.Configuration;
@@ -33,6 +35,11 @@
         public ICSharpTypeAndNamespaceHolderDeclaration TypeAndNamespaceHolder
         {
             get { return _typeAndNamespaceHolder; }
+        }
+
+        public DocumentRange CalculateRange()
+        {
+            throw new System.NotImplementedException();
         }
 
         /// <inheritdoc/>
